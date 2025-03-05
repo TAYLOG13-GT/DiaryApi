@@ -59,7 +59,9 @@ class Diary extends Component {
             if ('User'+colIndex === params.field) {
                 const rowIds = this.state.UserData[colIndex];
                 if (rowIds.includes(params.id)) {
-              //      params.value = rowIds[0];
+                    if (rowIds[0] === params.id) {
+                        params.value = rowIds[0];
+                    }
                     return "highlight-cell";
                 }
             }
